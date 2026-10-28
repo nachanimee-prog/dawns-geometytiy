@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090b13"><meta name="description" content="Dawns Geometrytiy — a neon rhythm platformer with 7 levels and a map builder.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<title>Dawns Geometrytiy</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="top"><a class="logo" href="#"><span class="logo-mark">◆</span><span><b>dawns</b><small>GEOMETRYTIY</small></span></a><div class="top-actions"><span class="tiny-pill">7 LEVELS</span><button id="soundBtn" class="icon-btn" aria-label="Toggle sound">♫</button></div></header>
+<main>
+<section id="homeScreen" class="screen active">
+<div class="hero"><div class="hero-text"><span class="eyebrow">READY. SET. JUMP.</span><h1>Beat the<br><em>geometry.</em></h1><p>One cube. Seven worlds. Zero excuses.</p><div class="hero-actions"><button id="playBtn" class="primary">▶ PLAY NOW</button><button id="buildBtn" class="secondary">＋ BUILD MODE</button></div><div class="best-line">BEST RUN <b id="bestText">0%</b><span class="best-track"><i id="bestBar"></i></span></div></div><div class="hero-art"><div class="art-grid"></div><div class="art-sun"></div><div class="art-cube"></div><div class="art-spike spike-a"></div><div class="art-spike spike-b"></div><div class="art-platform"></div><span class="art-label">DAWNS // 001</span></div></div>
+<div class="section-title"><div><span class="eyebrow">CHOOSE YOUR CHALLENGE</span><h2>Level select</h2></div><span class="tiny-pill">7 WORLDS</span></div>
+<div id="levelGrid" class="level-grid"></div>
+<div class="tip"><span>✦</span><p><b>PRO TIP</b><br>Tap or press Space to jump. Learn the rhythm, not just the obstacles.</p></div>
+</section>
+<section id="gameScreen" class="screen">
+<div class="game-top"><button id="backGame" class="secondary small">← MENU</button><div><small id="gameLevelTag">LEVEL 1</small><b id="gameLevelName">Neon Start</b></div><button id="restartBtn" class="icon-btn">↻</button></div>
+<div class="canvas-wrap"><canvas id="gameCanvas" aria-label="Geometry platform game"></canvas><div id="gameOverlay" class="game-overlay"><span class="overlay-symbol">◆</span><h2 id="overlayTitle">Ready?</h2><p id="overlayText">Tap to start your run.</p><button id="overlayBtn" class="primary">START RUN</button></div><div class="progress-label"><span id="progressText">0%</span><div class="progress-track"><i id="progressBar"></i></div></div></div>
+<div class="game-controls"><span>TOUCH / SPACE TO JUMP</span><button id="jumpBtn" class="primary">JUMP ↗</button></div>
+</section>
+<section id="buildScreen" class="screen">
+<div class="builder-head"><button id="backBuild" class="secondary small">← MENU</button><div><span class="eyebrow">CREATOR LAB</span><h2>Build mode</h2></div><button id="saveMapBtn" class="primary small">SAVE MAP</button></div>
+<p class="builder-desc">Tap a tile to cycle through empty, block, and spike. Build a path, then test it!</p>
+<div class="builder-tools"><label>Map name <input id="mapName" maxlength="24" value="My First Map"></label><label>Brush <select id="brushSelect"><option value="cycle">Cycle tiles</option><option value="0">Erase</option><option value="1">Block</option><option value="2">Spike</option></select></label><button id="clearMapBtn" class="secondary small">CLEAR</button></div>
+<div id="builderGrid" class="builder-grid" aria-label="Map editor grid"></div>
+<div class="builder-footer"><span id="tileCount">0 obstacles</span><button id="testMapBtn" class="primary">▶ TEST MAP</button></div>
+<div class="saved-section"><div class="section-title"><div><span class="eyebrow">YOUR CREATIONS</span><h2>Saved maps</h2></div></div><div id="savedMaps" class="saved-maps"><p class="empty-state">Your saved maps will show up here.</p></div></div>
+</section>
+</main><footer><span>DAWNS GEOMETRYTIY</span><span>MADE TO JUMP ✦</span></footer>
+</div><script src="app.js"></script>
+</body></html>
